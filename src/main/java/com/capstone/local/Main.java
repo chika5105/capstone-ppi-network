@@ -32,6 +32,8 @@ public class Main {
                 .serializeNulls()
                 .create()
                 .toJson(data, new FileWriter("protein_data.json"));
+        System.out.println(
+                "Done preprocessing the dataset, you can see the processed dataset as a file called protein_data.json");
 
     }
 }
