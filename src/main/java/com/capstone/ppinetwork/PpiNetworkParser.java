@@ -85,7 +85,7 @@ public class PpiNetworkParser {
     }
 
     private Map<String, List<Neighbor>> parseNetworkData(Reader ioStream)
-            throws IOException{
+            throws IOException {
         /** Processes the interaction data from STRING DB. */
         Map<String, List<Neighbor>> networkData = new HashMap<>();
         CSVReader reader = new CSVReaderBuilder(ioStream).build();
@@ -93,6 +93,7 @@ public class PpiNetworkParser {
         for (Iterator<String[]> it = reader.iterator(); it.hasNext(); ) {
             String[] splitString = it.next()[0].split(" "); // Interaction data file is space-delimited.
             String key = splitString[0].trim();
+
             // Ignore csv headers.
             if (key.contains("protein1")) {
                 continue;

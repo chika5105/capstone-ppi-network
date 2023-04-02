@@ -22,7 +22,7 @@ import java.util.Optional;
 import java.util.Map;
 
 /**
- * TODO
+ * Entry point for the Lambda service.
  * Handler value: com.capstone.aws.Handler
  */
 public class Handler implements RequestHandler<Map<String,String>, String>{

@@ -20,7 +20,7 @@ import java.util.*;
 
 
 /**
- * TODO
+ * Utility class to handle all database operations and interactions with DynamoDB
  */
 public class DynamodbHelper {
     private static final String TABLE_NAME = "PPI_NETWORK_TABLE";
@@ -118,7 +118,8 @@ public class DynamodbHelper {
     }
 
     /**
-     * TODO
+     * Wrapper class to map directly to the DynamoDBMapper object.
+     * Reference: https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/dynamodbv2/datamodeling/DynamoDBMapper.html
      */
     @DynamoDBTable(tableName = TABLE_NAME)
     public static class PpiNodeDynamodbWrapper extends PpiNetworkNode {
